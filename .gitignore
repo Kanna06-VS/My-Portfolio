@@ -1,0 +1,17 @@
+node_modules/
+dist/
+preview/
+output/
+.vite/
+.vite-preview-cache/
+.vite-check-cache/
+.env
+.env.*
+!.env.example
+*.log
+*.tmp
+.codex/
+.agents/
+.aws/
+.DS_Store
+Thumbs.db

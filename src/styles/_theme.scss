@@ -1,0 +1,249 @@
+@font-face {
+    font-family: "Manrope";
+    src: url("../../assets/fonts/manrope-latin-variable.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 200 800;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: "Sora";
+    src: url("../../assets/fonts/sora-latin-variable.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 100 800;
+    font-display: swap;
+}
+
+
+:root {
+
+    --font-body: "Manrope", "Segoe UI", Arial, sans-serif;
+    --font-heading: "Sora", "Manrope", "Segoe UI", sans-serif;
+
+    --bg: #0b1428;
+    --bg-secondary: #14203a;
+
+    --glass:
+        rgba(20, 36, 60, 0.56);
+
+    --glass-strong:
+        rgba(17, 31, 53, 0.80);
+
+    --text: #f7f9fc;
+    --secondary: #a9b8cb;
+    --muted: #74869e;
+
+    --border:
+        rgba(255, 255, 255, 0.09);
+
+    --border-hover:
+        rgba(59, 221, 242, 0.32);
+
+    --cyan: #41e3f2;
+    --blue: #3c98ff;
+    --violet: #8268ff;
+    --pink: #ff4c92;
+    --green: #42dca8;
+    --gold: #ffc85c;
+
+    --gradient:
+        linear-gradient(
+            120deg,
+            #3fe2ef,
+            #3b9cff 50%,
+            #8268ff
+        );
+
+    --gradient-mixed:
+        linear-gradient(
+            125deg,
+            #ff4c92,
+            #8a63ff,
+            #3de0ef
+        );
+
+    --container: 1200px;
+
+    --shadow:
+        0 30px 90px
+        rgba(0, 0, 0, 0.28);
+
+    --transition:
+        0.35s
+        cubic-bezier(
+            0.2,
+            0.8,
+            0.2,
+            1
+        );
+}
+
+
+body.light-theme {
+
+    --bg: #edf6fa;
+    --bg-secondary: #f9fcfe;
+
+    --glass:
+        rgba(255, 255, 255, 0.58);
+
+    --glass-strong:
+        rgba(255, 255, 255, 0.84);
+
+    --text: #122032;
+    --secondary: #50647a;
+    --muted: #778b9f;
+
+    --border:
+        rgba(22, 65, 93, 0.11);
+
+    --border-hover:
+        rgba(17, 165, 198, 0.30);
+
+    --shadow:
+        0 28px 70px
+        rgba(40, 78, 105, 0.11);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+    scroll-padding-top: 105px;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+
+    font-family: var(--font-body);
+
+    color:
+        var(--text);
+
+    background:
+
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(39, 194, 223, 0.07),
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 90% 25%,
+            rgba(112, 78, 255, 0.07),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            180deg,
+            var(--bg),
+            var(--bg-secondary)
+        );
+
+    line-height: 1.7;
+
+    transition:
+        background 0.6s ease,
+        color 0.4s ease;
+}
+
+
+body.light-theme {
+
+    background:
+
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(39, 194, 223, 0.12),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 90% 25%,
+            rgba(112, 78, 255, 0.08),
+            transparent 32%
+        ),
+
+        linear-gradient(
+            180deg,
+            #f9fcfe,
+            #edf6fa
+        );
+}
+
+
+body.menu-open {
+    overflow: hidden;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.brand-copy strong,
+.footer-identity strong,
+.profile-metrics strong {
+    font-family: var(--font-heading);
+    font-weight: 700;
+}
+
+
+button {
+    font: inherit;
+}
+
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+ul {
+    list-style: none;
+}
+
+
+.container {
+
+    width:
+        min(
+            92%,
+            var(--container)
+        );
+
+    margin-inline: auto;
+}
+
+
+.section {
+
+    position: relative;
+
+    z-index: 2;
+
+    padding:
+        115px 0;
+}

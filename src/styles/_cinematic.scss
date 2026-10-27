@@ -1,0 +1,332 @@
+/* Directional light and editorial rhythm, with no motion applied to the portrait. */
+.hero-section {
+    min-height: 100svh;
+    align-items: flex-start;
+    padding: 130px 0 76px;
+    isolation: isolate;
+}
+
+.hero-atmosphere {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.hero-atmosphere::after {
+    content: "";
+    position: absolute;
+    right: 4%;
+    bottom: 0;
+    left: 4%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(65, 227, 242, 0.2), rgba(130, 104, 255, 0.2), transparent);
+}
+
+.hero-keylight,
+.hero-rimlight {
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+}
+
+.hero-keylight {
+    top: -23%;
+    right: -15%;
+    width: 1100px;
+    height: 1050px;
+    background: radial-gradient(ellipse, rgba(60, 152, 255, 0.14), rgba(65, 227, 242, 0.065) 35%, transparent 68%);
+}
+
+.hero-rimlight {
+    bottom: -43%;
+    left: -26%;
+    width: 1000px;
+    height: 1000px;
+    background: radial-gradient(ellipse, rgba(130, 104, 255, 0.14), rgba(60, 152, 255, 0.04) 42%, transparent 68%);
+}
+
+.hero-layout {
+    position: relative;
+    align-items: start;
+    gap: clamp(38px, 4.5vw, 74px);
+}
+
+.hero-copy {
+    min-width: 0;
+}
+
+.hero-title {
+    margin-top: 12px;
+    font-size: clamp(76px, 7.4vw, 104px);
+    font-weight: 650;
+    letter-spacing: -5px;
+    line-height: 1.02;
+}
+
+.hero-title .hero-title-line,
+.hero-title .hero-title-word {
+    display: block;
+    background: none;
+    -webkit-background-clip: initial;
+    background-clip: initial;
+    color: var(--text);
+}
+
+.hero-title .hero-title-line {
+    overflow: hidden;
+    padding: 0.04em 0.03em 0.15em 0;
+    margin-bottom: -0.15em;
+}
+
+.hero-title .hero-title-surname .hero-title-word {
+    background: linear-gradient(110deg, #41e3f2 4%, #42b4ff 48%, #9680ff 97%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.hero-role {
+    font-size: 12px;
+    font-weight: 750;
+    letter-spacing: 0.35px;
+}
+
+.availability-pill {
+    margin-bottom: 28px;
+    border-color: rgba(65, 227, 242, 0.17);
+    background: linear-gradient(120deg, rgba(65, 227, 242, 0.055), rgba(130, 104, 255, 0.03));
+}
+
+.hero-summary {
+    max-width: 570px;
+    margin-top: 27px;
+    font-size: 15px;
+    line-height: 1.85;
+}
+
+.hero-secondary {
+    max-width: 570px;
+    color: var(--secondary);
+    font-size: 12px;
+    line-height: 1.85;
+    opacity: 0.85;
+}
+
+.hero-actions {
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.hero-actions .primary-button,
+.hero-actions .secondary-button {
+    min-height: 52px;
+    padding-inline: 21px;
+    font-size: 11px;
+}
+
+.primary-button {
+    box-shadow: 0 12px 35px rgba(38, 172, 223, 0.2), inset 0 1px rgba(255, 255, 255, 0.25);
+}
+
+.primary-button:hover {
+    box-shadow: 0 16px 40px rgba(38, 172, 223, 0.28), inset 0 1px rgba(255, 255, 255, 0.35);
+}
+
+.hero-tags {
+    max-width: 590px;
+    gap: 7px;
+}
+
+.hero-tags > span {
+    padding: 7px 10px;
+    color: var(--secondary);
+    font-size: 8px;
+}
+
+.hero-scroll-cue {
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+    margin-top: 27px;
+    padding-block: 7px;
+    color: var(--secondary);
+    font-size: 10px;
+    letter-spacing: 0.8px;
+}
+
+.hero-scroll-line {
+    width: 34px;
+    height: 1px;
+    background: var(--gradient);
+    transition: width 0.25s ease;
+}
+
+.hero-scroll-cue:hover .hero-scroll-line {
+    width: 48px;
+}
+
+.hero-scroll-cue svg {
+    color: var(--cyan);
+}
+
+.hero-profile,
+.profile-panel,
+.profile-stage,
+.portrait-ring,
+.portrait-inner,
+.profile-photo {
+    transform: none !important;
+    animation: none !important;
+}
+
+.hero-profile {
+    align-self: start;
+}
+
+.profile-photo {
+    background: transparent;
+}
+
+.profile-panel,
+.profile-panel:hover {
+    border-color: rgba(117, 167, 212, 0.22);
+    background: linear-gradient(135deg, rgba(65, 227, 242, 0.035), transparent 35%, rgba(130, 104, 255, 0.07)), var(--glass);
+    box-shadow: 0 34px 85px rgba(3, 10, 25, 0.24), inset 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.portrait-ring {
+    box-shadow: 0 0 65px rgba(65, 227, 242, 0.12), 0 0 100px rgba(130, 104, 255, 0.05);
+}
+
+.section-heading h2 {
+    font-weight: 600;
+    line-height: 1.12;
+    letter-spacing: -2.5px;
+    text-wrap: balance;
+}
+
+.section-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+    color: #70dce9;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.section-eyebrow::before {
+    content: "";
+    display: inline-block;
+    flex: 0 0 24px;
+    width: 24px;
+    height: 1px;
+    background: var(--gradient);
+}
+
+.section > .container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: min(92%, 1200px);
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+.content-card,
+.experience-panel,
+.approach-card,
+.bento-card,
+.achievement-card,
+.cert-card,
+.education-panel {
+    background: linear-gradient(125deg, rgba(65, 227, 242, 0.035), transparent 40%, rgba(130, 104, 255, 0.04)), var(--glass);
+    box-shadow: 0 22px 60px rgba(3, 10, 25, 0.17), inset 0 1px rgba(255, 255, 255, 0.055);
+}
+
+.contact-panel {
+    border-color: rgba(65, 227, 242, 0.19);
+    background: radial-gradient(ellipse at 95% 20%, rgba(130, 104, 255, 0.14), transparent 50%),
+        radial-gradient(ellipse at 0 100%, rgba(65, 227, 242, 0.08), transparent 60%), var(--glass);
+    box-shadow: 0 30px 90px rgba(3, 10, 25, 0.24), inset 0 1px rgba(255, 255, 255, 0.09);
+}
+
+.contact-panel h2 {
+    font-weight: 600;
+    line-height: 1.13;
+    text-wrap: balance;
+}
+
+body.light-theme .hero-keylight {
+    background: radial-gradient(ellipse, rgba(60, 152, 255, 0.11), rgba(65, 227, 242, 0.09) 36%, transparent 68%);
+}
+
+body.light-theme .hero-rimlight {
+    background: radial-gradient(ellipse, rgba(130, 104, 255, 0.1), rgba(60, 152, 255, 0.035) 42%, transparent 68%);
+}
+
+body.light-theme .hero-role,
+body.light-theme .section-eyebrow,
+body.light-theme .hero-scroll-cue svg {
+    color: #087d96;
+}
+
+body.light-theme .availability-pill {
+    border-color: rgba(17, 141, 173, 0.2);
+    background: rgba(255, 255, 255, 0.48);
+}
+
+body.light-theme .profile-panel,
+body.light-theme .profile-panel:hover,
+body.light-theme .content-card,
+body.light-theme .experience-panel,
+body.light-theme .approach-card,
+body.light-theme .bento-card,
+body.light-theme .achievement-card,
+body.light-theme .cert-card,
+body.light-theme .education-panel,
+body.light-theme .contact-panel {
+    box-shadow: 0 25px 65px rgba(44, 82, 121, 0.1), inset 0 1px rgba(255, 255, 255, 0.9);
+}
+
+body.light-theme .profile-panel {
+    border-color: rgba(61, 136, 184, 0.18);
+}
+
+@media (max-width: 1020px) {
+    .hero-layout { gap: 48px; }
+    .hero-title { font-size: clamp(76px, 10vw, 100px); }
+}
+
+@media (max-width: 680px) {
+    .hero-section { padding: 112px 0 62px; }
+    .hero-layout { gap: 38px; }
+    .hero-title {
+        margin-top: 10px;
+        font-size: clamp(49px, 13.2vw, 72px);
+        letter-spacing: -2.8px;
+        line-height: 1.06;
+    }
+    .hero-role { font-size: 11px; letter-spacing: 0; }
+    .hero-summary { margin-top: 23px; font-size: 13px; line-height: 1.85; }
+    .hero-secondary { font-size: 11px; }
+    .availability-pill { margin-bottom: 22px; font-size: 9px; }
+    .hero-actions { margin-top: 26px; }
+    .hero-actions .primary-button,
+    .hero-actions .secondary-button { min-height: 54px; }
+    .hero-scroll-cue { margin-top: 22px; }
+    .hero-keylight { top: -20%; right: -120%; width: 950px; height: 950px; }
+    .hero-rimlight { bottom: -10%; left: -130%; width: 850px; height: 850px; }
+    .section-heading h2 { letter-spacing: -1.7px; line-height: 1.15; }
+    .section-eyebrow { gap: 9px; letter-spacing: 1.5px; font-size: 8px; }
+    .section-eyebrow::before { flex-basis: 18px; width: 18px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-scroll-line { transition: none; }
+}

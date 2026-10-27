@@ -1,0 +1,1074 @@
+/* Client engagements: window scrolling guides a horizontal project sequence. */
+#projects .section-heading {
+    max-width: 970px;
+    margin-bottom: 35px;
+}
+
+#projects .section-heading > p {
+    max-width: 730px;
+    line-height: 1.8;
+}
+
+.project-showcase {
+    --project-accent: #3c98ff;
+    position: relative;
+    min-width: 0;
+}
+
+.project-showcase-top {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    padding-inline: 3px;
+}
+
+.project-showcase-label,
+.project-showcase-top > :first-child {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--secondary);
+    font-size: 10px;
+    font-weight: 750;
+    letter-spacing: 1.5px;
+    line-height: 1.6;
+    text-transform: uppercase;
+}
+
+.project-showcase-label::before,
+.project-showcase-top > :first-child::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    flex-shrink: 0;
+    border-radius: 2px;
+    background: var(--gradient);
+    box-shadow: 0 0 14px rgba(65, 227, 242, 0.22);
+}
+
+.project-showcase-progress {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: auto;
+}
+
+.project-showcase-progress > span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    overflow: hidden;
+    border-radius: 4px;
+    background: var(--border);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-showcase-progress > span.is-active {
+    background: var(--gradient);
+    box-shadow: 0 0 11px rgba(60, 152, 255, 0.2);
+}
+
+.project-showcase-progress > span.is-complete {
+    background: rgba(60, 152, 255, 0.38);
+}
+
+[data-project-counter] {
+    min-width: 45px;
+    color: var(--secondary);
+    font-size: 11px;
+    font-weight: 650;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.5px;
+    text-align: right;
+}
+
+.project-showcase-layout {
+    display: grid;
+    grid-template-columns: 286px minmax(0, 1fr);
+    align-items: start;
+    gap: 24px;
+}
+
+.project-showcase:not(.is-enhanced) .project-showcase-layout {
+    grid-template-columns: minmax(0, 1fr);
+}
+
+.project-client-list {
+    position: relative;
+    display: grid;
+    gap: 10px;
+    min-width: 0;
+    padding-left: 14px;
+}
+
+.project-client-list::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 1px;
+    background: var(--border);
+}
+
+.project-client {
+    position: relative;
+    display: grid;
+    grid-template-columns: 22px 54px minmax(0, 1fr);
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+    min-height: 111px;
+    padding: 17px 13px;
+    overflow: hidden;
+    border: 1px solid transparent;
+    border-radius: 18px;
+    appearance: none;
+    color: var(--text);
+    background: transparent;
+    font-family: var(--font-body);
+    text-align: left;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: border-color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-client:hover {
+    border-color: var(--border);
+    background: rgba(60, 152, 255, 0.045);
+}
+
+.project-client.is-active,
+.project-client[aria-pressed="true"] {
+    border-color: rgba(60, 152, 255, 0.25);
+    background: linear-gradient(115deg, rgba(65, 227, 242, 0.09), rgba(130, 104, 255, 0.065)), var(--glass);
+    box-shadow: 0 10px 30px rgba(0, 15, 35, 0.07), inset 0 1px rgba(255, 255, 255, 0.035);
+}
+
+.project-client:focus-visible {
+    outline: 2px solid var(--blue);
+    outline-offset: 3px;
+}
+
+.project-client-number {
+    align-self: start;
+    padding-top: 2px;
+    color: var(--muted);
+    font-size: 10px;
+    font-weight: 750;
+    font-variant-numeric: tabular-nums;
+    line-height: 1.6;
+    transition: color 0.25s ease;
+}
+
+.project-client.is-active .project-client-number,
+.project-client[aria-pressed="true"] .project-client-number {
+    color: var(--blue);
+}
+
+.project-client-logo {
+    display: grid;
+    place-items: center;
+    width: 54px;
+    height: 48px;
+    padding: 7px;
+    overflow: hidden;
+    border: 1px solid #e9eef5;
+    border-radius: 11px;
+    background: #fff;
+}
+
+.project-client-logo img,
+.project-engagement-logo img {
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    min-height: 0;
+    object-fit: contain;
+}
+
+.project-client-copy {
+    display: grid;
+    gap: 7px;
+    min-width: 0;
+}
+
+.project-client-copy strong {
+    display: block;
+    color: var(--text);
+    font-size: 12px;
+    font-weight: 750;
+    line-height: 1.45;
+    overflow-wrap: break-word;
+}
+
+.project-client-copy small {
+    display: block;
+    color: var(--secondary);
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.project-client-arrow {
+    position: absolute;
+    right: 12px;
+    bottom: 11px;
+    display: grid;
+    place-items: center;
+    color: var(--blue);
+    opacity: 0;
+    transform: translateX(-5px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.project-client-arrow svg {
+    width: 15px;
+    height: 15px;
+}
+
+.project-client.is-active .project-client-arrow,
+.project-client[aria-pressed="true"] .project-client-arrow,
+.project-client:hover .project-client-arrow {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.project-client-indicator {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: -1px;
+    width: 3px;
+    min-height: 36px;
+    border-radius: 5px;
+    background: linear-gradient(180deg, var(--cyan), var(--blue) 55%, var(--violet));
+    box-shadow: 0 0 14px rgba(60, 152, 255, 0.3);
+    pointer-events: none;
+}
+
+.project-showcase:not(.is-enhanced) .project-client-indicator {
+    display: none;
+}
+
+.project-detail-stage.glass-panel {
+    min-width: 0;
+    min-height: 480px;
+    padding: 32px;
+    overflow: hidden;
+    border-radius: 26px;
+    background: radial-gradient(ellipse at 100% 0, rgba(130, 104, 255, 0.075), transparent 44%), var(--glass);
+}
+
+.project-detail-stage::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 32px;
+    left: 32px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(65, 227, 242, 0.55), rgba(130, 104, 255, 0.35), transparent);
+    pointer-events: none;
+}
+
+.project-engagement {
+    position: relative;
+    min-width: 0;
+}
+
+.project-detail-track {
+    min-width: 0;
+}
+
+.project-engagement + .project-engagement {
+    margin-top: 34px;
+    padding-top: 34px;
+    border-top: 1px solid var(--border);
+}
+
+.project-showcase.is-enhanced .project-engagement {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.project-showcase [hidden] {
+    display: none !important;
+}
+
+.project-engagement-heading {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    min-width: 0;
+    min-height: 102px;
+    padding-right: 36px;
+}
+
+.project-engagement-logo {
+    display: grid;
+    place-items: center;
+    flex: 0 0 90px;
+    width: 90px;
+    height: 78px;
+    padding: 13px;
+    overflow: hidden;
+    border: 1px solid #e9eef5;
+    border-radius: 17px;
+    background: #fff;
+    box-shadow: 0 5px 22px rgba(15, 45, 75, 0.045);
+}
+
+.project-engagement-identity {
+    position: relative;
+    z-index: 1;
+    min-width: 0;
+}
+
+.project-engagement-industry {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--secondary);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+}
+
+.project-engagement-identity h3 {
+    color: var(--text);
+    font-family: var(--font-heading);
+    font-size: clamp(25px, 2.3vw, 32px);
+    font-weight: 650;
+    letter-spacing: -1.1px;
+    line-height: 1.2;
+    overflow-wrap: break-word;
+}
+
+.project-engagement-platform {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: 11px;
+    color: var(--secondary);
+    font-size: 11px;
+    font-weight: 550;
+    line-height: 1.5;
+}
+
+.project-engagement-platform .technology-logo {
+    flex: 0 0 18px;
+    width: 18px;
+    height: 18px;
+}
+
+.project-engagement-number {
+    position: absolute;
+    z-index: 0;
+    top: -19px;
+    right: -4px;
+    color: var(--text);
+    font-family: var(--font-heading);
+    font-size: 100px;
+    font-weight: 650;
+    letter-spacing: -8px;
+    line-height: 1;
+    opacity: 0.045;
+    pointer-events: none;
+    user-select: none;
+}
+
+.project-engagement-summary {
+    max-width: 700px;
+    margin-top: 22px;
+    color: var(--secondary);
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.project-scope-heading {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 27px;
+    margin-bottom: 19px;
+}
+
+.project-scope-heading h4 {
+    color: var(--text);
+    font-family: var(--font-heading);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -0.25px;
+    line-height: 1.5;
+}
+
+.project-scope-heading > span {
+    color: var(--secondary);
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+.project-scope-list {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    padding: 17px 0 0;
+    list-style: none;
+}
+
+.project-scope-list::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 1px;
+    left: 1px;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(65, 227, 242, 0.48), rgba(60, 152, 255, 0.36), rgba(130, 104, 255, 0.4));
+}
+
+.project-scope-card {
+    position: relative;
+    min-width: 0;
+    padding: 17px 15px;
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    background: rgba(60, 152, 255, 0.022);
+    transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+.project-scope-card:hover {
+    border-color: var(--border-hover);
+    background: rgba(60, 152, 255, 0.05);
+}
+
+.project-scope-node {
+    display: inline-grid;
+    place-items: center;
+    min-width: 27px;
+    height: 25px;
+    margin-bottom: 13px;
+    padding-inline: 5px;
+    border: 1px solid rgba(60, 152, 255, 0.16);
+    border-radius: 7px;
+    color: var(--blue);
+    background: rgba(60, 152, 255, 0.07);
+    font-size: 9px;
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+}
+
+.project-scope-card:nth-of-type(2) .project-scope-node {
+    color: #8c82ed;
+    border-color: rgba(130, 104, 255, 0.2);
+    background: rgba(130, 104, 255, 0.07);
+}
+
+.project-scope-card:nth-of-type(3) .project-scope-node {
+    color: var(--cyan);
+    border-color: rgba(65, 227, 242, 0.2);
+    background: rgba(65, 227, 242, 0.06);
+}
+
+.project-scope-card h5 {
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.6px;
+    line-height: 1.55;
+    overflow-wrap: break-word;
+}
+
+.project-scope-card p {
+    margin-top: 8px;
+    color: var(--secondary);
+    font-size: 12px;
+    line-height: 1.8;
+    overflow-wrap: break-word;
+}
+
+.project-flow-pulse {
+    position: absolute;
+    z-index: 2;
+    top: -1px;
+    left: 0;
+    width: 45px;
+    height: 3px;
+    border-radius: 5px;
+    background: linear-gradient(90deg, transparent, var(--cyan), #e8fcff, transparent);
+    box-shadow: 0 0 12px rgba(65, 227, 242, 0.32);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.project-engagement-tags.pill-row {
+    gap: 7px;
+    margin-top: 24px;
+    padding-top: 19px;
+    border-top: 1px solid var(--border);
+}
+
+.project-engagement-tags.pill-row > span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    min-height: 28px;
+    padding: 5px 10px;
+    color: var(--secondary);
+    font-size: 9px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.project-showcase-status {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+}
+
+body.light-theme .project-client.is-active,
+body.light-theme .project-client[aria-pressed="true"] {
+    border-color: rgba(38, 132, 207, 0.27);
+    background: linear-gradient(115deg, rgba(65, 227, 242, 0.07), rgba(130, 104, 255, 0.04)), var(--glass-strong);
+    box-shadow: 0 8px 26px rgba(40, 78, 105, 0.055);
+}
+
+body.light-theme .project-client-number,
+body.light-theme .project-scope-node {
+    color: #2474a9;
+}
+
+body.light-theme .project-scope-card:nth-of-type(2) .project-scope-node {
+    color: #6c50c2;
+}
+
+body.light-theme .project-scope-card:nth-of-type(3) .project-scope-node {
+    color: #087d8d;
+}
+
+body.light-theme .project-engagement-number {
+    opacity: 0.035;
+}
+
+/* The document supplies the scroll distance; the card remains a quiet window
+   onto each project's full-sized content. Long projects are read before the
+   next horizontal transition rather than getting a nested scrollbar. */
+.project-showcase.is-scroll-driven {
+    display: flex;
+    flex-direction: column;
+    height: min(760px, calc(100vh - var(--project-pin-top, 108px) - 18px));
+    height: min(760px, calc(100svh - var(--project-pin-top, 108px) - 18px));
+}
+
+.project-showcase.is-scroll-driven .project-showcase-top {
+    flex: 0 0 auto;
+}
+
+.project-showcase.is-scroll-driven .project-showcase-layout {
+    flex: 1 1 0;
+    min-height: 0;
+    grid-template-rows: minmax(0, 1fr);
+    align-items: stretch;
+}
+
+.project-showcase.is-scroll-driven .project-client-list {
+    height: 100%;
+    grid-template-rows: repeat(4, minmax(0, 1fr));
+}
+
+.project-showcase.is-scroll-driven .project-client {
+    min-height: 0;
+}
+
+.project-showcase.is-scroll-driven .project-detail-stage.glass-panel {
+    height: 100%;
+    min-height: 0;
+    padding: 0;
+    isolation: isolate;
+}
+
+.project-showcase.is-scroll-driven .project-detail-track {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    will-change: transform;
+}
+
+.project-showcase.is-scroll-driven .project-engagement {
+    flex: 0 0 100%;
+    width: 100%;
+    min-width: 0;
+    padding: 32px;
+    will-change: transform;
+}
+
+.project-scroll-hint {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 9px;
+    min-height: 18px;
+    margin-top: 10px;
+    padding-inline: 3px;
+    color: var(--secondary);
+    font-size: 10px;
+    line-height: 1.7;
+}
+
+.project-scroll-hint::before {
+    content: "";
+    width: 28px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--blue));
+    opacity: 0.65;
+}
+
+.project-scroll-hint svg {
+    flex: 0 0 15px;
+    width: 15px;
+    height: 15px;
+    color: var(--blue);
+}
+
+/* A fully expanded reading layout for reduced motion and short viewports. */
+.project-showcase.is-linear .project-detail-track {
+    display: block;
+}
+
+.project-showcase.is-linear .project-engagement + .project-engagement {
+    margin-top: 38px;
+    padding-top: 38px;
+    border-top: 1px solid var(--border);
+}
+
+@media (max-width: 1100px) and (min-width: 901px) {
+    .project-showcase-layout {
+        grid-template-columns: 262px minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .project-client {
+        grid-template-columns: 17px 46px minmax(0, 1fr);
+        gap: 8px;
+        padding-inline: 11px;
+    }
+
+    .project-client-logo {
+        width: 46px;
+        height: 43px;
+    }
+
+    .project-detail-stage.glass-panel {
+        padding: 26px;
+    }
+
+    .project-showcase.is-scroll-driven .project-engagement {
+        padding: 26px;
+    }
+
+    .project-engagement-heading {
+        gap: 15px;
+        padding-right: 0;
+    }
+
+    .project-engagement-logo {
+        flex-basis: 73px;
+        width: 73px;
+        height: 66px;
+        padding: 10px;
+    }
+
+    .project-engagement-identity h3 {
+        font-size: 26px;
+    }
+
+    .project-scope-list {
+        grid-template-columns: 1fr;
+        gap: 9px;
+    }
+
+    .project-scope-card {
+        display: grid;
+        grid-template-columns: 27px minmax(0, 1fr);
+        column-gap: 12px;
+        padding: 12px 14px;
+    }
+
+    .project-scope-node {
+        grid-row: 1 / 3;
+        align-self: start;
+        margin: 1px 0 0;
+    }
+
+    .project-scope-card p {
+        margin-top: 3px;
+    }
+}
+
+@media (max-width: 900px) {
+    #projects .section-heading {
+        margin-bottom: 30px;
+    }
+
+    .project-showcase-layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+    }
+
+    .project-client-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        padding-left: 0;
+    }
+
+    .project-client-list::before,
+    .project-client-indicator {
+        display: none;
+    }
+
+    .project-client {
+        grid-template-columns: 22px 54px minmax(0, 1fr);
+        min-height: 99px;
+        padding: 16px;
+        border-color: var(--border);
+        border-radius: 17px;
+        background: var(--glass);
+    }
+
+    .project-detail-stage.glass-panel {
+        min-height: 0;
+        padding: 30px;
+    }
+
+    .project-engagement-identity h3 {
+        font-size: 30px;
+    }
+
+    .project-scope-card {
+        padding: 16px 13px;
+    }
+
+    .project-showcase.is-scroll-driven .project-showcase-layout {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .project-showcase.is-scroll-driven .project-client-list {
+        flex: 0 0 68px;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-rows: minmax(0, 1fr);
+        gap: 9px;
+        height: 68px;
+    }
+
+    .project-showcase.is-scroll-driven .project-client {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        min-height: 0;
+        padding: 10px 8px;
+        border-radius: 14px;
+    }
+
+    .project-showcase.is-scroll-driven .project-client-number {
+        align-self: center;
+        padding: 0;
+    }
+
+    .project-showcase.is-scroll-driven .project-client-logo {
+        flex: 0 0 45px;
+        width: 45px;
+        height: 40px;
+        padding: 6px;
+        border-radius: 9px;
+    }
+
+    .project-showcase.is-scroll-driven .project-client-copy {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        overflow: hidden;
+        clip-path: inset(50%);
+        white-space: nowrap;
+    }
+
+    .project-showcase.is-scroll-driven .project-client-arrow {
+        display: none;
+    }
+
+    .project-showcase.is-scroll-driven .project-detail-stage.glass-panel {
+        flex: 1 1 0;
+        height: auto;
+        min-height: 0;
+    }
+
+    .project-showcase.is-scroll-driven .project-engagement {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    #projects .section-heading > p {
+        font-size: 12px;
+    }
+
+    .project-showcase-top {
+        gap: 12px;
+        margin-bottom: 15px;
+        padding-inline: 1px;
+    }
+
+    .project-showcase-label,
+    .project-showcase-top > :first-child {
+        gap: 7px;
+        font-size: 8px;
+        letter-spacing: 1.15px;
+    }
+
+    .project-showcase-progress {
+        gap: 4px;
+    }
+
+    .project-showcase-progress > span {
+        width: 15px;
+    }
+
+    [data-project-counter] {
+        min-width: 38px;
+        font-size: 10px;
+    }
+
+    .project-showcase-layout {
+        gap: 15px;
+    }
+
+    .project-client-list {
+        gap: 8px;
+    }
+
+    .project-client {
+        grid-template-columns: 31px minmax(0, 1fr);
+        align-content: start;
+        align-items: center;
+        column-gap: 8px;
+        row-gap: 11px;
+        min-height: 140px;
+        padding: 13px 12px;
+        border-radius: 15px;
+    }
+
+    .project-client-number {
+        grid-column: 2;
+        grid-row: 1;
+        align-self: center;
+        padding: 0 10px 0 0;
+        text-align: right;
+    }
+
+    .project-client-logo {
+        grid-column: 1;
+        grid-row: 1;
+        width: 40px;
+        height: 35px;
+        padding: 5px;
+        border-radius: 8px;
+    }
+
+    .project-client-copy {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        gap: 5px;
+        padding-right: 2px;
+    }
+
+    .project-client-copy strong {
+        font-size: 11px;
+        line-height: 1.5;
+    }
+
+    .project-client-copy small {
+        font-size: 9px;
+    }
+
+    .project-client-arrow {
+        right: 11px;
+        bottom: 10px;
+    }
+
+    .project-client-arrow svg {
+        width: 13px;
+        height: 13px;
+    }
+
+    .project-detail-stage.glass-panel {
+        padding: 22px 20px;
+        border-radius: 21px;
+    }
+
+    .project-detail-stage::before {
+        right: 20px;
+        left: 20px;
+    }
+
+    .project-engagement-heading {
+        flex-wrap: wrap;
+        gap: 17px;
+        min-height: 0;
+        padding: 0;
+    }
+
+    .project-engagement-logo {
+        flex-basis: 73px;
+        width: 73px;
+        height: 63px;
+        padding: 10px;
+        border-radius: 13px;
+    }
+
+    .project-engagement-identity {
+        flex: 1 1 190px;
+    }
+
+    .project-engagement-industry {
+        font-size: 8px;
+        letter-spacing: 1.25px;
+    }
+
+    .project-engagement-identity h3 {
+        font-size: 26px;
+        letter-spacing: -0.9px;
+        line-height: 1.25;
+    }
+
+    .project-engagement-platform {
+        margin-top: 9px;
+        font-size: 10px;
+    }
+
+    .project-engagement-number {
+        top: -8px;
+        right: 1px;
+        font-size: 83px;
+    }
+
+    .project-engagement-summary {
+        margin-top: 20px;
+        font-size: 12px;
+        line-height: 1.9;
+    }
+
+    .project-scope-heading {
+        gap: 8px;
+        margin-top: 24px;
+        margin-bottom: 16px;
+    }
+
+    .project-scope-heading h4 {
+        font-size: 13px;
+    }
+
+    .project-scope-heading > span {
+        font-size: 9px;
+    }
+
+    .project-scope-list {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 10px;
+        padding-top: 15px;
+    }
+
+    .project-scope-card {
+        display: grid;
+        grid-template-columns: 27px minmax(0, 1fr);
+        column-gap: 12px;
+        padding: 15px 14px;
+        border-radius: 13px;
+    }
+
+    .project-scope-node {
+        grid-row: 1 / 3;
+        align-self: start;
+        margin: 1px 0 0;
+    }
+
+    .project-scope-card h5 {
+        font-size: 12px;
+    }
+
+    .project-scope-card p {
+        margin-top: 5px;
+        font-size: 12px;
+    }
+
+    .project-engagement-tags.pill-row {
+        margin-top: 21px;
+        padding-top: 17px;
+    }
+
+    .project-showcase.is-scroll-driven .project-client-list {
+        flex-basis: 62px;
+        gap: 7px;
+        height: 62px;
+    }
+
+    .project-showcase.is-scroll-driven .project-client {
+        gap: 5px;
+        padding: 8px 5px;
+        border-radius: 12px;
+    }
+
+    .project-showcase.is-scroll-driven .project-client-number {
+        font-size: 9px;
+    }
+
+    .project-showcase.is-scroll-driven .project-client-logo {
+        flex-basis: 34px;
+        width: 34px;
+        height: 32px;
+        padding: 4px;
+        border-radius: 7px;
+    }
+
+    .project-showcase.is-scroll-driven .project-engagement {
+        padding: 22px 20px;
+    }
+
+    .project-scroll-hint {
+        gap: 7px;
+        padding-right: 62px;
+        font-size: 9px;
+    }
+
+    .project-scroll-hint::before {
+        display: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .project-showcase *,
+    .project-showcase *::before,
+    .project-showcase *::after {
+        transition: none !important;
+    }
+
+    .project-flow-pulse {
+        display: none;
+    }
+}

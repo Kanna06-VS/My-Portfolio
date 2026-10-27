@@ -1,0 +1,2324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Vinay Sai Kothuri - Microsoft Dynamics 365 Business Central and Dynamics NAV Functional Consultant Portfolio"
+    >
+
+    <meta
+        name="author"
+        content="Vinay Sai Kothuri"
+    >
+
+    <title>
+        Vinay Sai Kothuri | Business Central Functional Consultant
+    </title>
+    <link rel="preload" href="./assets/fonts/manrope-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./assets/fonts/sora-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+
+
+<body>
+
+    <!-- =========================================================
+         THREE.JS + GLSL BACKGROUND
+    ========================================================== -->
+
+    <canvas
+        id="webglCanvas"
+        aria-hidden="true"
+    ></canvas>
+
+
+    <div
+        class="screen-grid"
+        aria-hidden="true"
+    ></div>
+
+
+    <div
+        class="global-cursor-glow"
+        id="cursorGlow"
+        aria-hidden="true"
+    ></div>
+
+
+    <div
+        class="scroll-progress"
+        id="scrollProgress"
+    ></div>
+
+
+
+    <!-- =========================================================
+         HEADER
+    ========================================================== -->
+
+    <header
+        class="site-header"
+        id="siteHeader"
+    >
+
+        <div class="container nav-shell glass-panel">
+
+            <a
+                href="#home"
+                class="brand"
+            >
+
+                <span class="brand-image">
+
+                    <img
+                        src="./images/products/business-central.webp"
+                        alt="Microsoft Dynamics 365 Business Central"
+                        width="325"
+                        height="325"
+                    >
+
+                </span>
+
+
+                <span class="brand-copy">
+
+                    <strong>
+                        Vinay Sai Kothuri
+                    </strong>
+
+                    <small>
+                        Business Central / NAV
+                    </small>
+
+                </span>
+
+            </a>
+
+
+
+            <nav
+                class="nav-links"
+                id="navLinks"
+            >
+
+                <a href="#home" class="nav-link active">
+                    Home
+                </a>
+
+                <a href="#about" class="nav-link">
+                    About
+                </a>
+
+                <a href="#approach" class="nav-link">
+                    Approach
+                </a>
+
+                <a href="#skills" class="nav-link">
+                    Skills
+                </a>
+
+                <a href="#projects" class="nav-link">
+                    Projects
+                </a>
+
+                <a href="#achievements" class="nav-link">
+                    Recognition
+                </a>
+
+                <a href="#certifications" class="nav-link">
+                    Certifications
+                </a>
+
+                <a href="#education" class="nav-link">
+                    Education
+                </a>
+
+                <a href="#contact" class="nav-link">
+                    Contact
+                </a>
+
+            </nav>
+
+
+
+            <div class="nav-actions">
+
+                <div class="theme-control" id="themeControl" data-tooltip-open="false">
+                    <button
+                        class="theme-toggle"
+                        id="themeToggle"
+                        type="button"
+                        aria-label="Switch theme"
+                        aria-describedby="themeTooltip"
+                    >
+                        <span id="themeIcon" aria-hidden="true">☀</span>
+                    </button>
+
+                    <div class="theme-tooltip" id="themeTooltip" role="tooltip" aria-hidden="true" data-mode="day">
+                        <div class="theme-tooltip-heading">
+                            <span class="theme-tooltip-symbol" aria-hidden="true">
+                                <svg class="theme-tooltip-sun" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4m0-14.2-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+                                <svg class="theme-tooltip-moon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 13.2A8.9 8.9 0 0 1 10.8 3.1a9 9 0 1 0 10 10.1Z"/></svg>
+                            </span>
+                            <div>
+                                <span class="theme-tooltip-eyebrow" id="themeTooltipState">Automatic theme</span>
+                                <strong id="themeTooltipTitle">Switch to day mode</strong>
+                            </div>
+                        </div>
+                        <p class="theme-tooltip-time" id="themeTooltipTime">6:00 AM – 6:00 PM</p>
+                        <span class="theme-tooltip-local">Your local time</span>
+                        <p class="theme-tooltip-note" id="themeTooltipNote">Changes automatically with the time. Click to switch now.</p>
+                    </div>
+                </div>
+
+
+                <button
+                    class="menu-toggle"
+                    id="menuToggle"
+                    type="button"
+                    aria-label="Open navigation"
+                    aria-expanded="false"
+                    aria-controls="navLinks"
+                >
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <main>
+
+
+        <!-- =====================================================
+             HERO
+        ====================================================== -->
+
+        <section
+            class="hero-section"
+            id="home"
+        >
+
+            <div class="hero-atmosphere" aria-hidden="true">
+                <span class="hero-keylight"></span>
+                <span class="hero-rimlight"></span>
+            </div>
+
+            <div class="container hero-layout">
+
+
+                <!-- LEFT -->
+
+                <div class="hero-copy">
+
+                    <div class="availability-pill hero-animate">
+
+                        <i></i>
+
+                        <span class="professional-label">
+                            Microsoft Dynamics 365 Business Central / Navision Professional
+                        </span>
+
+                    </div>
+
+
+                    <p class="hero-role hero-animate">
+                        Functional Consultant
+                        <span>•</span>
+                        ERP Consultant
+                    </p>
+
+
+                    <h1 class="hero-title">
+                        <span class="hero-title-line"><span class="hero-title-word" data-hero-line>Vinay Sai</span></span>
+                        <span class="hero-title-line hero-title-surname"><span class="hero-title-word" data-hero-line>Kothuri</span></span>
+                    </h1>
+
+
+                    <p class="hero-summary hero-animate">
+
+                        Results-driven ERP Consultant with
+
+                        <strong>
+                            4.8 years of experience
+                        </strong>
+
+                        in Microsoft Dynamics 365 Business Central
+                        and Microsoft Dynamics NAV.
+
+                    </p>
+
+
+                    <p class="hero-secondary hero-animate">
+
+                        Functional support, techno-functional troubleshooting,
+                        version upgrades, migration, process automation,
+                        documentation, user training and post-go-live support.
+
+                    </p>
+
+
+                    <div class="hero-actions hero-animate">
+
+                        <a
+                            href="#projects"
+                            class="primary-button"
+                        >
+
+                            View Projects
+
+                            <span>
+                                ↗
+                            </span>
+
+                        </a>
+
+
+                        <a
+                            href="./assets/Vinay_Sai_Kothuri_Resume.pdf"
+                            download
+                            class="secondary-button"
+                        >
+
+                            Download Resume
+
+                            <span>
+                                ↓
+                            </span>
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="hero-tags hero-animate">
+
+                        <span class="technology-label">
+                            <img class="technology-logo" src="./images/products/business-central.webp" alt="" width="16" height="16" loading="lazy" decoding="async">
+                            D365 Business Central
+                        </span>
+
+                        <span class="technology-label">
+                            <img class="technology-logo" src="./images/products/dynamics-nav-clean.png" alt="" width="16" height="16" loading="lazy" decoding="async">
+                            Dynamics NAV
+                        </span>
+
+                        <span>
+                            Functional Consulting
+                        </span>
+
+                        <span>
+                            Techno-Functional
+                        </span>
+
+                    </div>
+
+                    <a class="hero-scroll-cue hero-animate" href="#about">
+                        <span class="hero-scroll-line" aria-hidden="true"></span>
+                        <span>Explore my work</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10M7 17 17 7"/></svg>
+                    </a>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     PROFILE
+                ================================================== -->
+
+                <div class="hero-profile">
+
+                    <div class="profile-panel glass-panel">
+
+                        <div class="profile-aurora"></div>
+
+
+                        <div class="profile-stage">
+
+
+                            <div class="profile-halo"></div>
+
+
+                            <div class="portrait-ring">
+
+                                <div class="portrait-inner">
+
+                                    <img
+                                        src="./images/vinay-profile-portfolio.png"
+                                        alt="Vinay Sai Kothuri"
+                                        class="profile-photo"
+                                        width="1155"
+                                        height="1362"
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- BC -->
+
+                            <div class="badge-anchor badge-bc">
+
+                                <div class="product-badge floating-badge">
+
+                                    <img
+                                        src="./images/products/business-central.webp"
+                                        alt="Business Central"
+                                        width="325"
+                                        height="325"
+                                    >
+
+                                    <span>
+                                        BC
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- AZURE -->
+
+                            <div class="badge-anchor badge-azure">
+
+                                <div class="product-badge floating-badge">
+
+                                    <img
+                                        src="./images/products/azure.webp"
+                                        alt="Microsoft Azure"
+                                        width="240"
+                                        height="240"
+                                    >
+
+                                    <span>
+                                        AZURE
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- NAV -->
+
+                            <div class="badge-anchor badge-nav">
+
+                                <div class="product-badge nav-product-badge floating-badge">
+
+                                    <img
+                                        src="./images/products/dynamics-nav-clean.png"
+                                        alt="Microsoft Dynamics NAV"
+                                        width="1486"
+                                        height="1058"
+                                    >
+
+                                    <span>
+                                        NAV
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="profile-copy">
+
+                            <span class="profile-status">
+
+                                <i></i>
+
+                                <span class="professional-label">
+                                    Microsoft Dynamics 365 Business Central / Navision Professional
+                                </span>
+
+                            </span>
+
+
+                            <h2>
+                                Vinay Sai Kothuri
+                            </h2>
+
+
+                            <p>
+                                Functional Consultant — Microsoft Dynamics 365 BC / NAV
+                            </p>
+
+                        </div>
+
+
+
+                        <div class="profile-metrics">
+
+                            <div>
+
+                                <strong>
+                                    4
+                                </strong>
+
+                                <span>
+                                    Major Clients
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <strong>
+                                    L1–L3
+                                </strong>
+
+                                <span>
+                                    Support
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <strong>
+                                    3
+                                </strong>
+
+                                <span>
+                                    Certifications
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="profile-products">
+
+                            <span class="technology-label">
+                                <img class="technology-logo" src="./images/products/business-central.webp" alt="" width="16" height="16" loading="lazy" decoding="async">
+                                Business Central
+                            </span>
+
+                            <i></i>
+
+                            <span class="technology-label">
+                                <img class="technology-logo" src="./images/products/dynamics-nav-clean.png" alt="" width="16" height="16" loading="lazy" decoding="async">
+                                NAV 2016
+                            </span>
+
+                            <i></i>
+
+                            <span class="technology-label">
+                                <img class="technology-logo" src="./images/products/dynamics-nav-clean.png" alt="" width="16" height="16" loading="lazy" decoding="async">
+                                NAV 5.0
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             CLIENT EXPERIENCE
+        ====================================================== -->
+
+        <section class="company-section" aria-labelledby="companyTitle">
+
+            <div class="container">
+
+                <div class="company-heading">
+
+                    <div>
+                        <span class="section-eyebrow">PROFESSIONAL EXPERIENCE</span>
+                        <h2 id="companyTitle">Companies I've supported.</h2>
+                        <p>Professional experience and client engagements across Business Central and Dynamics NAV.</p>
+                    </div>
+
+                    <button
+                        type="button"
+                        class="company-motion-control"
+                        id="companyMotionToggle"
+                        aria-controls="companyTrack"
+                        aria-label="Pause company scrolling"
+                        title="Pause company scrolling"
+                        data-paused="false"
+                    >
+                        <svg class="company-pause-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+                            <path d="M8 5v14M16 5v14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+                        </svg>
+                        <svg class="company-resume-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+                            <path d="M8 5l11 7-11 7z" fill="currentColor" />
+                        </svg>
+                    </button>
+
+                </div>
+
+
+                <div class="company-marquee">
+
+                    <div class="company-track" id="companyTrack">
+
+                        <ul class="company-group">
+
+                            <li class="glass-panel company-card">
+                                <div class="company-logo company-logo-tcs">
+                                    <img src="./images/companies/tcs.svg" alt="" width="174" height="58" decoding="async">
+                                </div>
+                                <span class="company-name">Tata Consultancy Services (TCS)</span>
+                            </li>
+
+                            <li class="glass-panel company-card">
+                                <div class="company-logo">
+                                    <img src="./images/companies/akzonobel.png" alt="" width="184" height="59" decoding="async">
+                                </div>
+                                <span class="company-name">AkzoNobel</span>
+                            </li>
+
+                            <li class="glass-panel company-card">
+                                <div class="company-logo">
+                                    <img src="./images/companies/gri.svg" alt="" width="855" height="855" decoding="async">
+                                </div>
+                                <span class="company-name">Global Reporting Initiative</span>
+                            </li>
+
+                            <li class="glass-panel company-card">
+                                <div class="company-logo">
+                                    <img src="./images/companies/iff.png" alt="" width="280" height="202" decoding="async">
+                                </div>
+                                <span class="company-name">International Flavors &amp; Fragrances</span>
+                            </li>
+
+                            <li class="glass-panel company-card">
+                                <div class="company-logo">
+                                    <img src="./images/companies/ferring.png" alt="" width="132" height="61" decoding="async">
+                                </div>
+                                <span class="company-name">Ferring Pharmaceuticals</span>
+                            </li>
+
+                        </ul>
+
+
+                        <ul class="company-group" aria-hidden="true">
+
+                            <li class="glass-panel company-card">
+                                <div class="company-logo company-logo-tcs">
+                                    <img src="./images/companies/tcs.svg" alt="" width="174" height="58" decoding="async">
+                                </div>
+                                <span class="company-name">Tata Consultancy Services (TCS)</span>
+                            </li>
+
+                            <li class="glass-panel company-card">
+                                <div class="company-logo">
+                                    <img src="./images/companies/akzonobel.png" alt="" width="184" height="59" decoding="async">
+                                </div>
+                                <span class="company-name">AkzoNobel</span>
+                            </li>
+
+                            <li class="glass-panel company-card">
+                                <div class="company-logo">
+                                    <img src="./images/companies/gri.svg" alt="" width="855" height="855" decoding="async">
+                                </div>
+                                <span class="company-name">Global Reporting Initiative</span>
+                            </li>
+
+                            <li class="glass-panel company-card">
+                                <div class="company-logo">
+                                    <img src="./images/companies/iff.png" alt="" width="280" height="202" decoding="async">
+                                </div>
+                                <span class="company-name">International Flavors &amp; Fragrances</span>
+                            </li>
+
+                            <li class="glass-panel company-card">
+                                <div class="company-logo">
+                                    <img src="./images/companies/ferring.png" alt="" width="132" height="61" decoding="async">
+                                </div>
+                                <span class="company-name">Ferring Pharmaceuticals</span>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             ABOUT
+        ====================================================== -->
+
+        <section
+            class="section"
+            id="about"
+        >
+
+            <div class="container">
+
+                <div class="section-heading illustrated-heading">
+
+                    <div class="about-heading-copy">
+
+                        <span class="section-eyebrow">01 / ABOUT</span>
+
+                        <h2>
+                            Business understanding
+                            <span>before configuration.</span>
+                        </h2>
+
+                        <p>
+                            Bridging business operations, Microsoft Dynamics
+                            functionality and enterprise delivery.
+                        </p>
+
+                    </div>
+
+                    <img
+                        class="section-illustration about-illustration"
+                        src="./images/illustrations/erp-consulting-male.png"
+                        alt=""
+                        aria-hidden="true"
+                        width="1536"
+                        height="1024"
+                        loading="lazy"
+                        decoding="async"
+                    >
+
+                </div>
+
+
+
+                <div class="about-layout">
+
+
+                    <article class="glass-panel content-card reveal-card">
+
+                        <p class="large-copy">
+
+                            I work at the intersection of business processes,
+                            ERP functionality and technical teams.
+
+                        </p>
+
+
+                        <p>
+
+                            My experience includes Microsoft Dynamics 365
+                            Business Central and Microsoft Dynamics NAV across
+                            Finance, Sales, Purchase, Inventory, Warehouse
+                            and Fixed Assets.
+
+                        </p>
+
+
+                        <p>
+
+                            I work closely with business users, stakeholders
+                            and technical teams to understand requirements,
+                            resolve business-critical issues and deliver
+                            practical ERP improvements.
+
+                        </p>
+
+
+                        <p>
+
+                            My responsibilities also include UAT, upgrades,
+                            data migration, process automation, user training,
+                            test cases, SOW preparation and functional documentation.
+
+                        </p>
+
+
+                        <div class="pill-row">
+
+                            <span>
+                                Functional Support
+                            </span>
+
+                            <span>
+                                Techno-Functional
+                            </span>
+
+                            <span>
+                                Upgrades
+                            </span>
+
+                            <span>
+                                Migration
+                            </span>
+
+                            <span>
+                                UAT
+                            </span>
+
+                            <span>
+                                Post Go-Live
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article class="glass-panel experience-panel reveal-card">
+
+                        <span class="micro-label">
+                            PROFESSIONAL EXPERIENCE
+                        </span>
+
+
+                        <h3>
+                            Tata Consultancy Services
+                        </h3>
+
+
+                        <p class="experience-role">
+                            Functional Consultant
+                        </p>
+
+
+                        <small>
+                            Microsoft Dynamics 365 Business Central / NAV
+                        </small>
+
+
+                        <div class="experience-list">
+
+                            <div class="experience-row">
+
+                                <span>
+                                    01
+                                </span>
+
+
+                                <div>
+
+                                    <strong>
+                                        Product Landscape
+                                    </strong>
+
+                                    <p>
+                                        Business Central • NAV 2016 • NAV 5.0
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="experience-row">
+
+                                <span>
+                                    02
+                                </span>
+
+
+                                <div>
+
+                                    <strong>
+                                        Industry Exposure
+                                    </strong>
+
+                                    <p>
+                                        Chemicals • Reporting • Manufacturing • Pharmaceuticals
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="experience-row">
+
+                                <span>
+                                    03
+                                </span>
+
+
+                                <div>
+
+                                    <strong>
+                                        Enterprise Support
+                                    </strong>
+
+                                    <p>
+                                        L1 • L2 • L3
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             HOW I WORK
+        ====================================================== -->
+
+        <section
+            class="section section-soft"
+            id="approach"
+        >
+
+            <div class="container">
+
+                <div class="section-heading centered">
+
+                    <span class="section-eyebrow">
+                        02 / HOW I WORK
+                    </span>
+
+
+                    <h2>
+
+                        Practical thinking.
+
+                        <span>
+                            Sustainable solutions.
+                        </span>
+
+                    </h2>
+
+
+                    <p>
+
+                        My approach focuses on solving the real problem,
+                        protecting business operations and leaving
+                        usable knowledge behind.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="approach-grid">
+
+
+                    <article class="glass-panel approach-card reveal-card">
+
+                        <span class="big-card-number">
+                            01
+                        </span>
+
+
+                        <div class="approach-icon pink-icon">
+                            ↳
+                        </div>
+
+
+                        <h3>
+
+                            Cause
+
+                            <span>
+                                over symptom
+                            </span>
+
+                        </h3>
+
+
+                        <p>
+
+                            A ticket closed is not a problem solved.
+                            If the same issue returns next month,
+                            the root cause was never fixed.
+
+                        </p>
+
+
+                        <small>
+                            ROOT CAUSE THINKING
+                        </small>
+
+                    </article>
+
+
+
+                    <article class="glass-panel approach-card reveal-card">
+
+                        <span class="big-card-number">
+                            02
+                        </span>
+
+
+                        <div class="approach-icon blue-icon">
+                            ◷
+                        </div>
+
+
+                        <h3>
+
+                            Upgrades
+
+                            <span>
+                                around the close
+                            </span>
+
+                        </h3>
+
+
+                        <p>
+
+                            Finance has dates it cannot miss.
+                            Upgrade planning should fit the business
+                            calendar, not force the business around technology.
+
+                        </p>
+
+
+                        <small>
+                            BUSINESS-ALIGNED PLANNING
+                        </small>
+
+                    </article>
+
+
+
+                    <article class="glass-panel approach-card reveal-card">
+
+                        <span class="big-card-number">
+                            03
+                        </span>
+
+
+                        <div class="approach-icon violet-icon">
+                            ✓
+                        </div>
+
+
+                        <h3>
+
+                            Written down
+
+                            <span>
+                                or it didn't happen
+                            </span>
+
+                        </h3>
+
+
+                        <p>
+
+                            Test cases, configuration notes and user manuals
+                            keep knowledge available beyond one person.
+
+                        </p>
+
+
+                        <small>
+                            DOCUMENTATION FIRST
+                        </small>
+
+                    </article>
+
+
+
+                    <article class="glass-panel approach-card reveal-card">
+
+                        <span class="big-card-number">
+                            04
+                        </span>
+
+
+                        <div class="approach-icon cyan-icon">
+                            ◎
+                        </div>
+
+
+                        <h3>
+
+                            Ask the user,
+
+                            <span>
+                                not the system
+                            </span>
+
+                        </h3>
+
+
+                        <p>
+
+                            Requirements come from understanding how
+                            people actually work, not only from
+                            what the screen allows.
+
+                        </p>
+
+
+                        <small>
+                            USER-CENTERED DISCOVERY
+                        </small>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             SKILLS / BENTO
+        ====================================================== -->
+
+        <section
+            class="section"
+            id="skills"
+        >
+
+            <div class="container">
+
+                <div class="section-heading centered">
+
+                    <span class="section-eyebrow">
+                        03 / CAPABILITY
+                    </span>
+
+
+                    <h2>
+
+                        Microsoft ERP
+
+                        <span>
+                            capability map.
+                        </span>
+
+                    </h2>
+
+                </div>
+
+
+
+                <div class="bento-grid">
+
+
+                    <!-- MAIN -->
+
+                    <article class="glass-panel bento-card bento-main skill-bc reveal-card">
+
+                        <div class="skill-brand">
+
+                            <img
+                                src="./images/products/business-central.webp"
+                                alt="Business Central"
+                                width="325"
+                                height="325"
+                            >
+
+                        </div>
+
+
+                        <span class="micro-label">
+                            CORE ERP
+                        </span>
+
+
+                        <h3>
+                            Business Central & NAV
+                        </h3>
+
+
+                        <p>
+
+                            Functional and techno-functional support
+                            across Microsoft Dynamics ERP environments.
+
+                        </p>
+
+
+                        <div class="pill-row">
+
+                            <span>
+                                Functional Support
+                            </span>
+
+                            <span>
+                                Techno-Functional
+                            </span>
+
+                            <span class="technology-label">
+                                <img class="technology-logo" src="./images/products/dynamics-nav-clean.png" alt="" width="16" height="16" loading="lazy" decoding="async">
+                                C/AL
+                            </span>
+
+                            <span>
+                                Troubleshooting
+                            </span>
+
+                            <span>
+                                Version Upgrades
+                            </span>
+
+                            <span>
+                                Migration
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- FINANCE -->
+
+                    <article class="glass-panel bento-card skill-finance reveal-card">
+
+                        <div class="skill-symbol">
+                            ₹
+                        </div>
+
+
+                        <span class="micro-label">
+                            FINANCE
+                        </span>
+
+
+                        <h3>
+                            Financial Operations
+                        </h3>
+
+
+                        <ul class="clean-list">
+
+                            <li>
+                                General Ledger
+                            </li>
+
+                            <li>
+                                Accounts Payable
+                            </li>
+
+                            <li>
+                                Accounts Receivable
+                            </li>
+
+                            <li>
+                                Bank Reconciliation
+                            </li>
+
+                            <li>
+                                Fixed Assets
+                            </li>
+
+                            <li>
+                                Month / Year-End Support
+                            </li>
+
+                        </ul>
+
+                    </article>
+
+
+
+                    <!-- SCM -->
+
+                    <article class="glass-panel bento-card skill-scm reveal-card">
+
+                        <div class="skill-symbol">
+                            SCM
+                        </div>
+
+
+                        <span class="micro-label">
+                            SUPPLY CHAIN
+                        </span>
+
+
+                        <h3>
+                            Operational Processes
+                        </h3>
+
+
+                        <ul class="clean-list">
+
+                            <li>
+                                Sales
+                            </li>
+
+                            <li>
+                                Purchase
+                            </li>
+
+                            <li>
+                                Inventory
+                            </li>
+
+                            <li>
+                                Warehouse
+                            </li>
+
+                            <li>
+                                Configuration
+                            </li>
+
+                        </ul>
+
+                    </article>
+
+
+
+                    <!-- DOCUMENTATION -->
+
+                    <article class="glass-panel bento-card skill-documentation reveal-card">
+
+                        <div class="skill-symbol">
+                            DOC
+                        </div>
+
+
+                        <span class="micro-label">
+                            DELIVERY
+                        </span>
+
+
+                        <h3>
+                            Documentation & Analysis
+                        </h3>
+
+
+                        <ul class="clean-list">
+
+                            <li>
+                                Test Cases
+                            </li>
+
+                            <li>
+                                Statement of Work
+                            </li>
+
+                            <li>
+                                Functional Specifications
+                            </li>
+
+                            <li>
+                                Process Flows
+                            </li>
+
+                            <li>
+                                User Manuals
+                            </li>
+
+                        </ul>
+
+                    </article>
+
+
+
+                    <!-- ERP TRANSFORMATION -->
+
+                    <article class="glass-panel bento-card skill-transformation reveal-card">
+
+                        <div class="skill-symbol transformation-symbol">
+                            ↗
+                        </div>
+
+
+                        <span class="micro-label">
+                            TRANSFORMATION
+                        </span>
+
+
+                        <h3>
+                            ERP Transformation
+                        </h3>
+
+
+                        <div class="transformation-list">
+
+                            <div>
+                                <span>01</span>
+                                <p>Version Upgrades</p>
+                            </div>
+
+                            <div>
+                                <span>02</span>
+                                <p>Data Migration & Validation</p>
+                            </div>
+
+                            <div>
+                                <span>03</span>
+                                <p>UAT & User Training</p>
+                            </div>
+
+                            <div>
+                                <span>04</span>
+                                <p>Process Automation</p>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- SUPPORT -->
+
+                    <article class="glass-panel bento-card skill-support reveal-card">
+
+                        <div class="support-levels">
+
+                            <span>
+                                L1
+                            </span>
+
+                            <span>
+                                L2
+                            </span>
+
+                            <span>
+                                L3
+                            </span>
+
+                        </div>
+
+
+                        <span class="micro-label">
+                            ENTERPRISE SERVICE
+                        </span>
+
+
+                        <h3>
+                            Support & Delivery
+                        </h3>
+
+
+                        <p>
+
+                            Incident resolution, RCA, configuration,
+                            user guidance and post-go-live support.
+
+                        </p>
+
+                    </article>
+
+
+
+                    <!-- TOOLS -->
+
+                    <article class="glass-panel bento-card bento-wide skill-tools reveal-card">
+
+                        <span class="micro-label">
+                            MICROSOFT ECOSYSTEM
+                        </span>
+
+
+                        <h3>
+                            Tools & Technologies
+                        </h3>
+
+
+                        <div class="tool-cloud">
+
+                            <span class="technology-label">
+                                <img class="technology-logo" src="./images/products/power-bi.svg" alt="" width="16" height="16" loading="lazy" decoding="async">
+                                Power BI
+                            </span>
+
+                            <span class="technology-label">
+                                <img class="technology-logo" src="./images/products/power-automate.png" alt="" width="16" height="16" loading="lazy" decoding="async">
+                                Power Automate
+                            </span>
+
+                            <span class="technology-label">
+                                <img class="technology-logo" src="./images/products/excel.svg" alt="" width="16" height="16" loading="lazy" decoding="async">
+                                Excel
+                            </span>
+
+                            <span class="technology-label">
+                                <img class="technology-logo" src="./images/products/word.svg" alt="" width="16" height="16" loading="lazy" decoding="async">
+                                Word
+                            </span>
+
+                            <span class="technology-label">
+                                <img class="technology-logo" src="./images/products/powerpoint.svg" alt="" width="16" height="16" loading="lazy" decoding="async">
+                                PowerPoint
+                            </span>
+
+                            <span class="technology-label">
+                                <img class="technology-logo" src="./images/products/dynamics-nav-clean.png" alt="" width="16" height="16" loading="lazy" decoding="async">
+                                C/AL
+                            </span>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             PROJECTS
+        ====================================================== -->
+
+        <section class="section section-soft" id="projects">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-eyebrow">04 / CLIENT ENGAGEMENTS</span>
+                    <h2>Client projects.<br><span>From scope to support.</span></h2>
+                    <p>Explore my Business Central and Navision experience across support, upgrades, integration and migration.</p>
+                </div>
+
+                <div class="project-showcase" id="projectShowcase" role="region" aria-label="Client project explorer">
+                    <div class="project-showcase-top" hidden>
+                        <span class="project-showcase-label">SELECTED WORK / 04 CLIENTS</span>
+                        <div class="project-showcase-progress" aria-hidden="true"><span data-project-step></span><span data-project-step></span><span data-project-step></span><span data-project-step></span></div>
+                        <span data-project-counter aria-hidden="true">01 / 04</span>
+                    </div>
+                    <div class="project-showcase-layout">
+                        <nav class="project-client-list" aria-label="Choose a client project" hidden>
+                            <span class="project-client-indicator" data-project-indicator aria-hidden="true"></span>
+                        <button class="project-client is-active" type="button" data-project-select="0" aria-pressed="true" aria-controls="project-detail-akzonobel">
+                            <span class="project-client-number">01</span>
+                            <span class="project-client-logo"><img src="./images/companies/akzonobel.png" alt="" width="184" height="59" loading="lazy" decoding="async"></span>
+                            <span class="project-client-copy"><strong>AkzoNobel</strong><small>Business Central</small></span>
+                            <span class="project-client-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+                        </button>
+                        <button class="project-client" type="button" data-project-select="1" aria-pressed="false" aria-controls="project-detail-gri">
+                            <span class="project-client-number">02</span>
+                            <span class="project-client-logo"><img src="./images/companies/gri.svg" alt="" width="855" height="855" loading="lazy" decoding="async"></span>
+                            <span class="project-client-copy"><strong>Global Reporting Initiative</strong><small>Business Central</small></span>
+                            <span class="project-client-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+                        </button>
+                        <button class="project-client" type="button" data-project-select="2" aria-pressed="false" aria-controls="project-detail-iff">
+                            <span class="project-client-number">03</span>
+                            <span class="project-client-logo"><img src="./images/companies/iff.png" alt="" width="280" height="202" loading="lazy" decoding="async"></span>
+                            <span class="project-client-copy"><strong>International Flavors &amp; Fragrances</strong><small>NAV 5.0</small></span>
+                            <span class="project-client-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+                        </button>
+                        <button class="project-client" type="button" data-project-select="3" aria-pressed="false" aria-controls="project-detail-ferring">
+                            <span class="project-client-number">04</span>
+                            <span class="project-client-logo"><img src="./images/companies/ferring.png" alt="" width="132" height="61" loading="lazy" decoding="async"></span>
+                            <span class="project-client-copy"><strong>Ferring Pharmaceuticals</strong><small>NAV 2016</small></span>
+                            <span class="project-client-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+                        </button>
+                        </nav>
+                        <div class="project-detail-stage glass-panel">
+                        <div class="project-detail-track">
+                        <article class="project-engagement" id="project-detail-akzonobel" aria-labelledby="project-title-akzonobel" data-project-name="AkzoNobel">
+                            <div class="project-engagement-heading" data-project-animate>
+                                <div class="project-engagement-logo"><img src="./images/companies/akzonobel.png" alt="" width="184" height="59" loading="lazy" decoding="async"></div>
+                                <div class="project-engagement-identity">
+                                    <span class="project-engagement-industry">CHEMICALS &amp; COATINGS</span>
+                                    <h3 id="project-title-akzonobel">AkzoNobel</h3>
+                                    <span class="project-engagement-platform technology-label"><img class="technology-logo" src="./images/products/business-central.webp" alt="" width="16" height="16" loading="lazy" decoding="async"> Business Central</span>
+                                </div>
+                                <span class="project-engagement-number" aria-hidden="true">01</span>
+                            </div>
+                            <p class="project-engagement-summary" data-project-animate>Functional and technical support for Microsoft Dynamics 365 Business Central in a chemicals and coatings environment. My work covers daily user support, configuration improvements, troubleshooting and version upgrades, connecting business requirements with practical ERP changes.</p>
+                            <div class="project-scope-heading" data-project-animate><h4>Scope &amp; delivery</h4><span>My contribution</span></div>
+                            <div class="project-scope-list" role="list">
+                                <span class="project-flow-pulse" data-project-pulse aria-hidden="true"></span>
+                                <div class="project-scope-card" role="listitem" data-project-animate>
+                                    <span class="project-scope-node" aria-hidden="true">01</span>
+                                    <h5>Functional</h5>
+                                    <p>Delivered L1 and L2 support for daily Business Central operations, resolving user issues and working with business stakeholders on configuration updates and business process improvements.</p>
+                                </div>
+                                <div class="project-scope-card" role="listitem" data-project-animate>
+                                    <span class="project-scope-node" aria-hidden="true">02</span>
+                                    <h5>Technical</h5>
+                                    <p>Supported troubleshooting, customization and performance optimization in Business Central, bringing functional understanding into technical activities and changes to the existing ERP environment.</p>
+                                </div>
+                                <div class="project-scope-card" role="listitem" data-project-animate>
+                                    <span class="project-scope-node" aria-hidden="true">03</span>
+                                    <h5>Upgrade</h5>
+                                    <p>Supported Business Central version upgrades and compatibility validation, checking that existing processes remained aligned with the upgraded environment alongside ongoing functional and technical support.</p>
+                                </div>
+                            </div>
+                            <div class="project-engagement-tags pill-row" data-project-animate>
+                                <span class="technology-label"><img class="technology-logo" src="./images/products/business-central.webp" alt="" width="16" height="16" loading="lazy" decoding="async"> BC</span>
+                                    <span>L1/L2</span>
+                                    <span>Upgrade</span>
+                                    <span>Troubleshooting</span>
+                            </div>
+                        </article>
+
+                        <article class="project-engagement" id="project-detail-gri" aria-labelledby="project-title-gri" data-project-name="Global Reporting Initiative">
+                            <div class="project-engagement-heading" data-project-animate>
+                                <div class="project-engagement-logo"><img src="./images/companies/gri.svg" alt="" width="855" height="855" loading="lazy" decoding="async"></div>
+                                <div class="project-engagement-identity">
+                                    <span class="project-engagement-industry">REPORTING</span>
+                                    <h3 id="project-title-gri">Global Reporting Initiative</h3>
+                                    <span class="project-engagement-platform technology-label"><img class="technology-logo" src="./images/products/business-central.webp" alt="" width="16" height="16" loading="lazy" decoding="async"> Business Central</span>
+                                </div>
+                                <span class="project-engagement-number" aria-hidden="true">02</span>
+                            </div>
+                            <p class="project-engagement-summary" data-project-animate>Business Central engagement covering requirements gathering, configuration, workflows and process automation. My contribution connects sprint discussions and end-user requirements with system setups, user acceptance testing and documentation, followed by ongoing functional support for production operations.</p>
+                            <div class="project-scope-heading" data-project-animate><h4>Scope &amp; delivery</h4><span>My contribution</span></div>
+                            <div class="project-scope-list" role="list">
+                                <span class="project-flow-pulse" data-project-pulse aria-hidden="true"></span>
+                                <div class="project-scope-card" role="listitem" data-project-animate>
+                                    <span class="project-scope-node" aria-hidden="true">01</span>
+                                    <h5>Requirements</h5>
+                                    <p>Participated in sprint meetings with end users to gather detailed requirements, understand process needs and translate business requirements into practical Business Central setups.</p>
+                                </div>
+                                <div class="project-scope-card" role="listitem" data-project-animate>
+                                    <span class="project-scope-node" aria-hidden="true">02</span>
+                                    <h5>Configuration</h5>
+                                    <p>Configured posting groups, workflows and process automation in Business Central. Collaborated with business users on configuration updates and process optimizations for daily operations.</p>
+                                </div>
+                                <div class="project-scope-card" role="listitem" data-project-animate>
+                                    <span class="project-scope-node" aria-hidden="true">03</span>
+                                    <h5>Delivery</h5>
+                                    <p>Managed user acceptance testing sessions, prepared structured test scenarios and developed user manuals for new features, alongside L1 and L2 functional support and ticket resolution.</p>
+                                </div>
+                            </div>
+                            <div class="project-engagement-tags pill-row" data-project-animate>
+                                <span>UAT</span>
+                                    <span>Workflow</span>
+                                    <span>Automation</span>
+                                    <span>L1/L2</span>
+                            </div>
+                        </article>
+
+                        <article class="project-engagement" id="project-detail-iff" aria-labelledby="project-title-iff" data-project-name="International Flavors &amp; Fragrances">
+                            <div class="project-engagement-heading" data-project-animate>
+                                <div class="project-engagement-logo"><img src="./images/companies/iff.png" alt="" width="280" height="202" loading="lazy" decoding="async"></div>
+                                <div class="project-engagement-identity">
+                                    <span class="project-engagement-industry">MANUFACTURING</span>
+                                    <h3 id="project-title-iff">International Flavors &amp; Fragrances</h3>
+                                    <span class="project-engagement-platform technology-label"><img class="technology-logo" src="./images/products/dynamics-nav-clean.png" alt="" width="16" height="16" loading="lazy" decoding="async"> NAV 5.0</span>
+                                </div>
+                                <span class="project-engagement-number" aria-hidden="true">03</span>
+                            </div>
+                            <p class="project-engagement-summary" data-project-animate>Techno-functional support for Microsoft Dynamics NAV 5.0 across Finance, Sales, Purchase, Inventory and Fixed Assets. My work includes reports, system configuration, financial closing assistance, user training and documentation, alongside NAV-to-SAP migration and data validation.</p>
+                            <div class="project-scope-heading" data-project-animate><h4>Scope &amp; delivery</h4><span>My contribution</span></div>
+                            <div class="project-scope-list" role="list">
+                                <span class="project-flow-pulse" data-project-pulse aria-hidden="true"></span>
+                                <div class="project-scope-card" role="listitem" data-project-animate>
+                                    <span class="project-scope-node" aria-hidden="true">01</span>
+                                    <h5>Functional</h5>
+                                    <p>Handled L1, L2 and L3 support across core ERP modules, including root cause analysis, issue resolution and month-end and year-end financial closing assistance.</p>
+                                </div>
+                                <div class="project-scope-card" role="listitem" data-project-animate>
+                                    <span class="project-scope-node" aria-hidden="true">02</span>
+                                    <h5>Techno-functional</h5>
+                                    <p>Designed, customized and supported NAV reports and enhancements. Managed user accounts, role-based permissions and configurations, while providing end-user training, user manuals and knowledge-base articles.</p>
+                                </div>
+                                <div class="project-scope-card" role="listitem" data-project-animate>
+                                    <span class="project-scope-node" aria-hidden="true">03</span>
+                                    <h5>Migration</h5>
+                                    <p>Assisted with NAV-to-SAP migration and data validation, including data correction in live systems. Supported these activities alongside ongoing functional and technical assistance for the NAV environment.</p>
+                                </div>
+                            </div>
+                            <div class="project-engagement-tags pill-row" data-project-animate>
+                                <span class="technology-label"><img class="technology-logo" src="./images/products/dynamics-nav-clean.png" alt="" width="16" height="16" loading="lazy" decoding="async"> NAV 5.0</span>
+                                    <span class="technology-label"><img class="technology-logo" src="./images/products/dynamics-nav-clean.png" alt="" width="16" height="16" loading="lazy" decoding="async"> C/AL</span>
+                                    <span>Migration</span>
+                                    <span>L1-L3</span>
+                            </div>
+                        </article>
+
+                        <article class="project-engagement" id="project-detail-ferring" aria-labelledby="project-title-ferring" data-project-name="Ferring Pharmaceuticals">
+                            <div class="project-engagement-heading" data-project-animate>
+                                <div class="project-engagement-logo"><img src="./images/companies/ferring.png" alt="" width="132" height="61" loading="lazy" decoding="async"></div>
+                                <div class="project-engagement-identity">
+                                    <span class="project-engagement-industry">PHARMACEUTICAL</span>
+                                    <h3 id="project-title-ferring">Ferring Pharmaceuticals</h3>
+                                    <span class="project-engagement-platform technology-label"><img class="technology-logo" src="./images/products/dynamics-nav-clean.png" alt="" width="16" height="16" loading="lazy" decoding="async"> NAV 2016</span>
+                                </div>
+                                <span class="project-engagement-number" aria-hidden="true">04</span>
+                            </div>
+                            <p class="project-engagement-summary" data-project-animate>Functional support for a Germany-based pharmaceutical environment using Microsoft Dynamics NAV 2016. My contribution spans Coupa integration, Finance, Sales and Purchase operations, with continued troubleshooting, configuration assistance, documentation and user guidance after implementation.</p>
+                            <div class="project-scope-heading" data-project-animate><h4>Scope &amp; delivery</h4><span>My contribution</span></div>
+                            <div class="project-scope-list" role="list">
+                                <span class="project-flow-pulse" data-project-pulse aria-hidden="true"></span>
+                                <div class="project-scope-card" role="listitem" data-project-animate>
+                                    <span class="project-scope-node" aria-hidden="true">01</span>
+                                    <h5>Integration</h5>
+                                    <p>Supported integration between Coupa and Microsoft Dynamics NAV for procurement and financial processes, alongside functional assistance for the NAV environment used by the pharmaceutical business.</p>
+                                </div>
+                                <div class="project-scope-card" role="listitem" data-project-animate>
+                                    <span class="project-scope-node" aria-hidden="true">02</span>
+                                    <h5>Modules</h5>
+                                    <p>Provided functional support across Finance, Sales and Purchase, working with business users to resolve issues, optimize configurations and support daily operations and accurate transaction handling.</p>
+                                </div>
+                                <div class="project-scope-card" role="listitem" data-project-animate>
+                                    <span class="project-scope-node" aria-hidden="true">03</span>
+                                    <h5>Post go-live</h5>
+                                    <p>Provided ongoing assistance after implementation, including troubleshooting, documentation and user guidance. Worked with business users to address functional issues and support effective use of NAV.</p>
+                                </div>
+                            </div>
+                            <div class="project-engagement-tags pill-row" data-project-animate>
+                                <span class="technology-label"><img class="technology-logo" src="./images/products/dynamics-nav-clean.png" alt="" width="16" height="16" loading="lazy" decoding="async"> NAV 2016</span>
+                                    <span>Coupa</span>
+                                    <span>Finance</span>
+                                    <span>Support</span>
+                            </div>
+                        </article>
+                        </div>
+                        </div>
+                    </div>
+                    <p class="project-scroll-hint" hidden><span data-project-scroll-label>Scroll to explore · Select a client to jump</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v16m-6-6 6 6 6-6"/></svg></p>
+                    <p class="project-showcase-status" role="status" aria-live="polite" aria-atomic="true"></p>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- =====================================================
+             ACHIEVEMENTS
+        ====================================================== -->
+
+        <section
+            class="section"
+            id="achievements"
+        >
+
+            <div class="container">
+
+                <div class="section-heading centered">
+
+                    <span class="section-eyebrow">
+                        05 / RECOGNITION
+                    </span>
+
+
+                    <h2>
+
+                        Work that
+
+                        <span>
+                            earned recognition.
+                        </span>
+
+                    </h2>
+
+                </div>
+
+
+
+                <div class="achievement-grid">
+
+
+                    <article class="glass-panel achievement-card reveal-card">
+
+                        <span class="achievement-number">
+                            01
+                        </span>
+
+
+                        <div class="achievement-symbol">
+                            ★
+                        </div>
+
+
+                        <h3>
+                            Star of the Month
+                        </h3>
+
+
+                        <p>
+
+                            Awarded in April 2026 for consistent
+                            high performance and contribution.
+
+                        </p>
+
+                    </article>
+
+
+
+                    <article class="glass-panel achievement-card reveal-card">
+
+                        <span class="achievement-number">
+                            02
+                        </span>
+
+
+                        <div class="achievement-symbol">
+                            ✓
+                        </div>
+
+
+                        <h3>
+                            Appreciation Certificate
+                        </h3>
+
+
+                        <p>
+
+                            Appreciation received from the client
+                            and organization for project contributions.
+
+                        </p>
+
+                    </article>
+
+
+
+                    <article class="glass-panel achievement-card reveal-card">
+
+                        <span class="achievement-number">
+                            03
+                        </span>
+
+
+                        <div class="achievement-symbol">
+                            ◆
+                        </div>
+
+
+                        <h3>
+                            Client & Manager Recognition
+                        </h3>
+
+
+                        <p>
+
+                            Recognized by clients and Project Manager
+                            for successful project outcomes.
+
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             CERTIFICATIONS
+        ====================================================== -->
+
+        <section
+            class="section section-soft"
+            id="certifications"
+        >
+
+            <div class="container">
+
+                <div class="section-heading centered">
+
+                    <span class="section-eyebrow">
+                        06 / MICROSOFT CREDENTIALS
+                    </span>
+
+
+                    <h2>
+
+                        Microsoft
+
+                        <span>
+                            certified professional.
+                        </span>
+
+                    </h2>
+
+                </div>
+
+
+
+                <div class="cert-grid">
+
+
+                    <!-- MB-800 -->
+
+                    <article class="glass-panel certification-card reveal-card">
+
+                        <div class="cert-top">
+
+                            <span class="cert-code">
+                                MB-800
+                            </span>
+
+
+                            <div class="cert-status">
+
+                                <span class="microsoft-status">
+                                    Microsoft
+                                </span>
+
+                                <span class="active-status">
+                                    ● Active
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="cert-icon">
+
+                            <img
+                                src="./images/products/business-central.webp"
+                                alt="Business Central"
+                                width="325"
+                                height="325"
+                            >
+
+                        </div>
+
+
+                        <h3>
+                            Dynamics 365 Business Central Functional Consultant Associate
+                        </h3>
+
+
+                        <p>
+
+                            Microsoft certification demonstrating
+                            functional expertise in Dynamics 365 Business Central.
+
+                        </p>
+
+
+                        <a
+                            href="https://learn.microsoft.com/api/credentials/share/en-us/VinaySaiKothuri-4185/D35095F5ED86668?sharingId=E96406CDDF396EC0"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            View Credential ↗
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- AZ-900 -->
+
+                    <article class="glass-panel certification-card reveal-card">
+
+                        <div class="cert-top">
+
+                            <span class="cert-code">
+                                AZ-900
+                            </span>
+
+
+                            <div class="cert-status">
+
+                                <span class="microsoft-status">
+                                    Microsoft
+                                </span>
+
+                                <span class="active-status">
+                                    ● Active
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="cert-icon">
+                            <img
+                                src="./images/products/azure.webp"
+                                alt="Microsoft Azure"
+                                width="240"
+                                height="240"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                        </div>
+
+
+                        <h3>
+                            Microsoft Azure Fundamentals
+                        </h3>
+
+
+                        <p>
+
+                            Microsoft certification covering
+                            cloud fundamentals and Azure services.
+
+                        </p>
+
+
+                        <a
+                            href="https://learn.microsoft.com/api/credentials/share/en-us/VinaySaiKothuri-4185/46DFE52E769A1328?sharingId=E96406CDDF396EC0"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            View Credential ↗
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- PL-500 -->
+
+                    <article class="glass-panel certification-card reveal-card">
+
+                        <div class="cert-top">
+
+                            <span class="cert-code">
+                                PL-500
+                            </span>
+
+
+                            <div class="cert-status">
+
+                                <span class="microsoft-status">
+                                    Microsoft
+                                </span>
+
+                                <span class="expired-status">
+                                    ● Expired
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="cert-icon">
+                            <img
+                                src="./images/products/power-automate.png"
+                                alt="Microsoft Power Automate"
+                                width="640"
+                                height="640"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                        </div>
+
+
+                        <h3>
+                            Power Automate RPA Developer Associate
+                        </h3>
+
+
+                        <p>
+
+                            Microsoft certification focused on robotic
+                            process automation using Power Automate.
+
+                        </p>
+
+
+                        <a
+                            href="https://learn.microsoft.com/en-us/users/vinaysaikothuri-4185/credentials/certification/power-automate-rpa-developer-associate?tab=credentials-tab"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            View Credential ↗
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             EDUCATION
+        ====================================================== -->
+
+        <section
+            class="section"
+            id="education"
+        >
+
+            <div class="container">
+
+                <article class="glass-panel education-panel reveal-card">
+
+                    <div>
+
+                        <span class="section-eyebrow">
+                            07 / EDUCATION
+                        </span>
+
+
+                        <h2>
+
+                            Academic
+
+                            <span>
+                                foundation.
+                            </span>
+
+                        </h2>
+
+                    </div>
+
+
+                    <div class="education-divider"></div>
+
+
+                    <div class="education-copy">
+
+                        <span>
+                            Bachelor of Technology
+                        </span>
+
+
+                        <h3>
+                            Computer Science
+                        </h3>
+
+
+                        <p>
+                            Pace Institute of Technology and Sciences
+                        </p>
+
+
+                        <div class="education-meta">
+
+                            <span>
+                                Ongole, Andhra Pradesh
+                            </span>
+
+                            <span>
+                                June 2017 – October 2021
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             CONTACT
+        ====================================================== -->
+
+        <section
+            class="section contact-section"
+            id="contact"
+        >
+
+            <div class="container">
+
+                <article class="glass-panel contact-panel reveal-card">
+
+                    <div class="contact-glow"></div>
+
+
+                    <div class="contact-copy">
+
+                        <span class="section-eyebrow">
+                            08 / LET'S CONNECT
+                        </span>
+
+
+                        <h2>
+
+                            Let's build better
+
+                            <span>
+                                Business Central solutions.
+                            </span>
+
+                        </h2>
+
+
+                        <p>
+
+                            Open to Microsoft Dynamics 365 Business Central,
+                            Dynamics NAV, ERP consulting, functional support,
+                            techno-functional support, upgrades and
+                            enterprise transformation opportunities.
+
+                        </p>
+
+
+                        <div class="contact-actions">
+
+                            <a
+                                href="mailto:vinaysaikothuri2000@gmail.com"
+                                class="primary-button"
+                            >
+                                Email Me
+
+                                <span>
+                                    ↗
+                                </span>
+
+                            </a>
+
+
+                            <a
+                                href="https://www.linkedin.com/in/kothurivinaysai-bc-functionalconsultant/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="secondary-button"
+                            >
+                                LinkedIn
+
+                                <span>
+                                    ↗
+                                </span>
+
+                            </a>
+
+
+                            <a
+                                href="./assets/Vinay_Sai_Kothuri_Resume.pdf"
+                                download
+                                class="secondary-button"
+                            >
+                                Resume
+
+                                <span>
+                                    ↓
+                                </span>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <img
+                        class="section-illustration contact-illustration"
+                        src="./images/illustrations/erp-collaboration.png"
+                        alt=""
+                        aria-hidden="true"
+                        width="1536"
+                        height="1024"
+                        loading="lazy"
+                        decoding="async"
+                    >
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================== -->
+
+    <footer class="footer" id="footer">
+
+        <div class="container">
+
+            <div class="footer-layout">
+
+                <a href="#home" class="footer-brand">
+
+                    <span class="footer-mark" aria-hidden="true">
+                        VSK
+                    </span>
+
+                    <span class="footer-identity">
+                        <strong>Vinay Sai Kothuri</strong>
+                        <span>Functional Consultant &middot; ERP Consultant</span>
+                    </span>
+
+                </a>
+
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © <span id="currentYear"></span> Vinay Sai Kothuri
+                </p>
+
+                <p class="footer-specialty">
+                    Microsoft Dynamics 365 Business Central / NAV
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =========================================================
+         BACK TO TOP
+    ========================================================== -->
+
+    <button
+        class="back-top"
+        id="backTop"
+        type="button"
+        aria-label="Back to top"
+    >
+        ↑
+    </button>
+
+
+
+    <!-- =========================================================
+         VITE ENTRY
+    ========================================================== -->
+
+    <script
+        type="module"
+        src="/src/scripts/main.ts"
+    ></script>
+
+</body>
+
+</html>
